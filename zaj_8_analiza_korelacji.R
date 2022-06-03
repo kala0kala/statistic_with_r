@@ -99,8 +99,9 @@ plot(braking$speed, braking$distance,
      xlab = "speed", ylab = "distance", pch = 16)
 
 shapiro.test(braking$speed)
+#Mo¿emy stwierdziæ, ¿e zmienna ma rozk³ad normalny
 shapiro.test(braking$distance)
-#Mo¿emy stwierdziæ, ¿e obie zmienne maj¹ rozk³ad normalny
+#Nie mo¿emy stwierdziæ, ¿e zmienna ma rozk³ad normalny
 
 qqnorm(braking$speed)
 qqline(braking$speed, col = "red")
@@ -110,7 +111,7 @@ qqline(braking$distance, col = "red")
 
 cor(braking$speed,braking$distance)
 cor.test(braking$speed,braking$distance,method="pearson")
-#Nie istnieje istotny zwi¹zek pomiêdzy zmiennymi,
+#Istnieje silny zwi¹zek prawostronny
 
 
 #usuniêcie zmiennych odstaj¹cych
@@ -135,7 +136,7 @@ qqline(braking2$distance, col = "red")
 
 cor(braking2$speed, braking2$distance)
 cor.test(braking2$speed, braking2$distance,method="pearson")
-#Nie istnieje istotny zwi¹zek pomiêdzy zmiennymi,
+#Istnieje silny zwi¹zek prawostronny
 
 # Zadanie 8.4 -------------------------------------------------------------
 # SprawdŸ wspomnian¹ powy¿ej niezmienniczoœæ wspó³czynnika korelacji liniowej Pearsona na wybranym zbiorze danych.
